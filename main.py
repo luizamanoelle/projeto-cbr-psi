@@ -1,4 +1,5 @@
 import cbrkit
+import utils
 from cbrkit.similarity import linear, euclidean, numeric
 from cbrkit.similarity.numeric import interval
 
@@ -20,25 +21,10 @@ solutions = ["intervention_type",
     "weekly_frequency",
     "recommendation_text"]
 
-# funções de apoio
-# coeficiente de similaridade pra main_issue
-def jaccard_similarity(a, b):
-    set_a = set(a.lower().split())
-    set_b = set(b.lower().split())
-    
-    intersection = set_a & set_b
-    union = set_a | set_b
-    
-    if len(union) == 0:
-        return 0
-    
-    return len(intersection) / len(union)
-
-# similaridade global
 similarity_config = {
     "stress_level": interval(min, max),
     "sleep_quality": interval(min,max),
-    "social_support": ,
+   # "social_support": ,
     "physical_activity": ,
     "gad7_estimate": interval(min,max),
     "phq9_estimate": interval(min,max),
@@ -47,6 +33,8 @@ similarity_config = {
     "main_issue": jaccard_similarity,
     "work_or_study_impairment": interval(min, max),
 }
+
+# similaridade global
 
 # PESOS :
 # main_issue: 0.25
