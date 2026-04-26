@@ -32,3 +32,24 @@ O trabalho consiste no desenvolvimento de um sistema de Raciocínio Baseado em C
 | Categórica | comorbid_profile         | -                                               |
 | Categórica | clinical_severity        | -                                               |
 | String     | main_issue               | Coeficiente de similaridade (Índice de Jaccard) |
+
+### Justificativa na exclusão das features
+
+age, gender: pouca relação com os problemas
+
+anxiety_score, depression_score, clinical_severity: já são medidos com gad7 e phq9, que são escores psicométricos e indicadores de gravidade
+
+sleep_hours: já possui relação com sleep_quality
+
+symptom_duration_months, prior_treatment, current_medication: não parece influenciar na proposta de tratamento
+
+irritability_level: já representado com stress_level
+
+appetite_change, trauma_history, substance_use_risk, bmi_estimate: pouca relação com problema/solução
+
+comorbid_profile: possível inferir pelas outras features
+
+
+
+
+
