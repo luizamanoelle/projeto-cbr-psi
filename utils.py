@@ -56,7 +56,7 @@ def global_similarity(case1, case2, weights, ranges):
         if attr == "main_issue":
             sim = jaccard_similarity(val1, val2)
         
-        elif attr == "concentration_difficulty" | attr == "panic_symptoms":
+        elif attr in ["concentration_difficulty", "panic_symptoms"]:
             sim = categorical_similarity(val1, val2)    
             
         else:
