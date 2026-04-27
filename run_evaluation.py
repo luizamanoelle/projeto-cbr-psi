@@ -10,9 +10,9 @@ import evaluation
 df = pd.read_csv("novo_arquivo.csv")
 
 weights = {
-    "main_issue": 0.25,
-    "gad7_estimate": 0.15,
-    "phq9_estimate": 0.15,
+    "main_issue": 0.15,
+    "gad7_estimate": 0.2,
+    "phq9_estimate": 0.2,
     "stress_level": 0.1,
     "sleep_quality": 0.1,
     "social_support": 0.1,
